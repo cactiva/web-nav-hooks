@@ -1,4 +1,4 @@
-import hookrouter from 'hookrouter';
+import * as hookrouter from 'hookrouter';
 const nav = (): any => {
     return {
         navigate: (to: string) => {
