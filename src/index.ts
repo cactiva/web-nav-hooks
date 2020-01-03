@@ -1,14 +1,17 @@
+import hookrouter from 'hookrouter';
 const nav = (): any => {
     return {
         navigate: (to: string) => {
-            return to;
+            return hookrouter.navigate(to);
         },
         reset: (to: string) => {
-            return to;
+            return hookrouter.navigate(to, true);
         },
-        back: () => { }
+        back: () => {
+            window.history.back();
+        }
     };
 };
-
 export const useNavigation = nav as any;
+export const router = hookrouter;
 
