@@ -1,5 +1,13 @@
 const nav = (): any => {
-    return {};
+    return {
+        navigate: (to: string) => {
+            return to;
+        },
+        reset: (to: string) => {
+            return to;
+        },
+        back: () => { }
+    };
 };
 
 export const useNavigation = nav as any;
